@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="style.css">
+<style>
+.background-image {
+  background-image: url("freeship.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  width: 100%; 
+  height: 400px; 
+}
+</style>
+</head>
+<body class="background-image">
+	<div>
+		
+<p id="demo"></p>
+<form action="address.php" method="POST" id="form">
+<div class="container">
+<h3 align="center" style="color:black;" class="pt-3">Shipping Address</h3>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-body">
+<label for="uname" class="mt-2 form-label text-dark"><i class='bx bxs-user'>Username:</i></label>
+<input id="uname" type="text" name="Name" class="form-control" autocomplete="off">
+<span id="error"></span><br>
+<label for="mail" class="mt-2 form-label text-dark"><i class='bx bxs-envelope'>Email:</i></label>
+<input id="mail" type="email" name="email" class="form-control" autocomplete="off">
+<span id="merror"></span><br>
+<label for="pwd" class="mt-2 form-label text-dark"><i class='bx bxs-lock'>Password:</i></label>
+<input id="pwd" type="password" name="password" class="form-control" autocomplete="off">
+<span id="perror"></span><br>
+<label for="no" class="mt-2 form-label text-dark"><i class='bx bxs-phone'>Phone Number:</i></label>
+<input type="tel" name="num" id="no" size="10" minlength="1" maxlength="10" class="form-control">
+<span id="terror"></span><br>
+<label for="no" class="mt-2 form-label text-dark"><i class='bx bxs-home-circle'>Address</i></label>
+<input type="text" name="adrs" id="add" size="10" class="form-control" autocomplete="off">
+<span id="aerror"></span><br>
+<div style="text-align: center;">
+<button type="submit" class="mt-2 btn btn-info text-dark" id="ram" style="border-radius: 50px;"><b>Submit</b></button>
+</div>
+</form>
+<script>
+        let form=document.getElementById('form');
+	let utel=document.getElementById('no');
+	let addres=document.getElementById('add');
+	let uname=document.getElementById('uname');
+	let email=document.getElementById("mail");
+        let pass=document.getElementById("pwd");
+	let terror2=document.getElementById('terror');
+	let aerror2=document.getElementById('aerror');
+	let uerror=document.getElementById('error');
+	let merror2=document.getElementById('merror');
+        let perror2=document.getElementById('perror');
+        form.addEventListener("submit",event=>{event.preventDefault();validate();})
+        function validate(){
+		let telph=utel.value.trim();
+		let name=uname.value.trim();
+		let emai=email.value.trim();
+        let psd=pass.value.trim();
+		let adr=addres.value.trim();
+		uerror.innerText = "";
+        merror2.innerText = "";
+        perror2.innerText = "";
+		terror2.innerText = "";
+		aerror2.innerText = "";
+		if(name===""){
+                uerror.innerText="can't be empty";
+                }
+                else if(name.length<5){
+                uerror.innerText="must be conatin 5 letters";
+                }
+                else if(!isNaN(name)){
+                uerror.innerText="only alphabets";
+                }
+		else if(emai===""){
+                	merror2.innerText="email can't be empty";
+                }
+            	else if(!(emai.match(/^[a-zA-Z0-9_/.-]+@[a-zA-Z0-9_-]+(?:\.[a-z]{2,6})$/))){
+                	merror2.innerText="invalid mail";
+		}
+		if(psd===""){
+                perror2.innerText="can't be empty";
+                }
+           	else if(!(psd.match(/[a-z]+[A-Z]+[0-9]+/) || (/[A-Z]+[a-z]+[0-9]/))){
+                	perror2.innerText="must used aleast one capital,small,digit";
+           	}
+           	else if(!psd.match(/[#_@$^%]/)){
+                	perror2.innerText="contain atleast one special character";
+		}
+		else if(telph===""){
+                	terror2.innerText="telphone number can't be empty";
+           	}
+                else if(!telph.match(/[6-9][0-9]{9}/)){
+                	terror2.innerText="invalid number";
+                }
+				else if(adr===""){
+                aerror2.innerText="can't be empty";
+                }
+                
+                else if(!isNaN(adr)){
+                aerror2.innerText="only alphabets";
+                }
+		else{
+       	        	form.submit();
+       	   	}
+	}
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
