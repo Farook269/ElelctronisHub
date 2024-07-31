@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Caprasimo&family=DM+Sans:opsz,wght@9..40,200&family=Kanit&family=Lobster&family=Oxygen:wght@300;400;700&family=Playfair+Display&family=Poppins:wght@400;500;600;700&display=swap');
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      padding: 15px 20px;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .navbar li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .navbar li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: black;
+      transition: 0.3s ease;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: red;
+      /* Change to your desired hover color */
+    }
+  </style>
+  <style>
+    /* Custom CSS for footer */
+    footer {
+      padding-top: 10px;
+      /* Decrease the top padding to reduce the height */
+      padding-bottom: 10px;
+      /* Decrease the bottom padding to reduce the height */
+      /* Keep the maximum width as desired */
+      margin: 0 auto;
+      /* Center the footer horizontally */
+    }
+
+    #centered-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <link rel="stylesheet" href="review.css">
+
+  <!-- link for swiper -->
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>ElectronicsHub</title>
+  <!-- BOOTSTRAP LINKS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand " href="#">
+        <h1><span style="color:#ecf0f1;font-family: 'Playfair Display', serif;">Electronics</span><span style="color:#ecf0f1;font-family: 'Playfair Display', serif;">Hub</span></h1>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="session.php">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#RDX">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <marquee direction="Left" behaviour="slide"
+    style="font-family: Arial, Helvetica, sans-serif; color: red;font-size: x-large;">
+    Electronic Products Up To 50% Off
+</marquee>
+  <div class="container">
+    <div style="margin-top: 20px;">
+      <div class="carousel slide" data-bs-ride="carousel" id="mycarousel">
+        <ul class="carousel-indicators ">
+          <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+          <li data-bs-target="#mycarousel" data-bs-slide-to="3"></li>
+          <li data-bs-target="#mycarousel" data-bs-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="C1.jpg" alt="" class="w-100 h-60 img-fluid">
+            <div class="carousel-caption">
+              <h4>Xclusive Offers</h4>
+            </div>
+          </div>
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="C2.png" alt="" class="w-100 h-60 img-fluid">
+            <div class="carousel-caption">
+              <h4>Xclusive Offers</h4>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="C3.jpg" alt="" class="w-100 h-60 img-fluid">
+            <div class="carousel-caption">
+              <h4>Xclusive Offers</h4>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="C4.jpg" alt="" class="w-100 h-60 img-fluid">
+            <div class="carousel-caption">
+              <h4>Xclusive Offers</h4>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="C5.jpg" alt="" class="w-100 h-60 img-fluid">
+            <div class="carousel-caption">
+              <h4>Xclusive Offers</h4>
+            </div>
+          </div>
+        </div>
+        <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark"></span></a>
+        <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark"></span></a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div style="margin-top: 20px;">
+    <section>
+      <a href="shop.html"><img src="sale.jpg" alt="sale" class="img-fluid"></a>
+    </section>
+  </div>
+  <div style="margin-top: 20px;">
+    <section id="centered-section">
+    <h1>Shop Now <span class="badge bg-secondary">New Sale 70%</span></h1>
+      <br>
+    </section>
+    <section id="centered-section">
+      
+      <a href="shop.html"><img src="sale1.jpg" alt="sale1" class="img-fluid"></a>
+    </section>
+  </div>
+  <div style="margin-top: 20px;">
+    <h2 align="center">Customer Reviews</h2>
+  </div>
+  <div style="margin-top: 20px;"></div>
+  <!-- review section starts-->
+  <section class="review" id="review">
+    <div class="swiper review-slider">
+      <div class="swiper-wrapper">
+        <!-- customer1 review -->
+        <div class="swiper-slide box">
+          <img src="client1.jpeg" alt="c1">
+          <p> "Electronics Hub deserves five stars from me! I purchased wireless earbuds, and they're incredible. Not only do they sound amazing, but I'm also glad to support a brand that prioritizes sustainability. It's wonderful to see a company that balances quality, affordability, and environmental consciousness"</p>
+          <h3>Lalitha</h3>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+        </div>
+        <!-- customer2 review -->
+        <div class="swiper-slide box">
+          <img src="client4.jpeg" alt="c2">
+          <p>Absolutely thrilled with my recent Electronix Hub purchase! The laptop I got was not only top-notch in quality but also came at an unbelievably reasonable price. It's great to see a company that offers such excellent electronics while also keeping sustainability in mind.!</p>
+          <h3>Rajesh</h3>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+        </div>
+
+
+        <!-- customer3 review -->
+        <div class="swiper-slide box">
+          <img src="client2.jpeg" alt="c3">
+          <p>"I recently shopped at Electronics hub  and I'm thrilled with my purchase. The quality and price of the of the product
+            exceeded my expectations. I'll definitely be coming back for more. Keep up the great work!"</p>
+          <h3>Madhuri</h3>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+        <!-- customer4 review -->
+        <div class="swiper-slide box">
+          <img src="client5.jpeg" alt="c4">
+          <p> The selection and quality at Electronix Hub truly impressed me. I ordered a smartphone, and it arrived promptly and in impeccable condition. The fact that they prioritize sustainable practices adds even more value. Keep up the fantastic work!""</p>
+          <h3>Sushanth</h3>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+        </div>
+        <!-- customer5 review -->
+        <div class="swiper-slide box">
+          <img src="client3.jpeg" alt="c5">
+          <p>"I'm all about aesthetics and performance, and the 'wireless Earbuds' nailed both. The rose gold accents
+            are stunning, and the sound quality is unmatched. They're now a fashion statement for my ears!"</p>
+          <h3>Swarna Latha</h3>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+        </div>
+        <!-- customer6 review -->
+        <div class="swiper-slide box">
+          <img src="client6.jpg" alt="c6">
+          <p> ""Electronics Hub has become my preferred choice for electronics. I purchased a gaming console and the entire process was seamless. The pricing was competitive, and I'm glad they emphasize sustainable products. It feels great to support a brand that cares about both customers and the environment.""</p>
+          <h3>Vishwak</h3>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="login.html">Previous</a></li>
+     
+      <li class="page-item"><a class="page-link" href="shop.html">Next</a></li>
+    </ul>
+  </nav>
+  <!-- Footer -->
+  <div style="margin-top: 20px;" id="RDX">
+    <footer class="text-center text-lg-start bg-warning text-muted" style="background-color: black;" height="400px">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-4 d-none d-sm-block">
+          <span>
+            <h3 style="font-family:'Oxygen', sans-serif;"><b>Get connected to Electronics Hub on Social Networks</b>
+            </h3>
+          </span>
+        </div>
+        <!-- Left -->
+        <!--Right -->
+        <div></div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4" style="font-family: 'Anton', sans-serif;">
+                About Xclusive Fashions
+              </h6>
+              <p style="font-family:'Lobster', cursive;">
+                A brand that will help you feel your best...
+                Fashion that fits your lifestyle...
+                Comfort is EveryWhere...
+                Let Electronics Hub here for to make you as a Model...
+                Online Shopping Site for Electrical gadgets in India. Electronics Hub Expert brings you a variety of
+               Accessories and lifestyle products ...
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Brands
+              </h6>
+              <p>
+                <a href="https://www.samsung.com/in/shop-faq/" class="text-reset" style="text-decoration: none;"
+                  style="font-family: 'Poppins', sans-serif;">SAMSUNG</a>
+              </p>
+              <p>
+                <a href="https://www.lg.com/global/" class="text-reset" style="text-decoration: none;"
+                  style="font-family: 'Poppins', sans-serif;">LG</a>
+              </p>
+              <p>
+                <a href="https://www.novatechnologies.com/"
+                  class="text-reset" style="text-decoration: none;"
+                  style="font-family: 'Poppins', sans-serif;">NOVA</a>
+              </p>
+              <p>
+                <a href="https://www.shop.philips.co.in/men"
+                  class="text-reset" style="text-decoration: none;"
+                  style="font-family: 'Poppins', sans-serif;">Philips</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Social Media
+              </h6>
+              <p>
+                <a href="https://instagram.com/electronics_hub_7?igshid=ZDc4ODBmNjlmNQ==" class="text-reset" style="text-decoration: none;"><i
+                    class='bx bxl-instagram'><b>Instagram</b></i></a>
+              </p>
+              <p>
+                <a href="https://chat.whatsapp.com/KcKCvjonRpc7N8MY8YI7ZV" class="text-reset"
+                  style="text-decoration: none;"><i class='bx bxl-whatsapp'><b>Whatsapp</b></i></a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
+              <p style="font-family: 'Poppins', sans-serif;"> <i class='bx bx-current-location'>INDIA</i><br>
+                Andhra Pradesh,<br>
+                Kadapa-516001<br></p>
+              <p>
+              <h6><i class='bx bx-envelope'><b>G-mail</b></i></h6>
+              <p style="font-family: 'Poppins', sans-serif;">ElectronicsHub@gmail.com</p>
+              </p>
+              <h6><i class='bx bxs-phone'><b>Customer Care</b></i></h6>
+              <p style="font-family: 'Poppins', sans-serif;">+91 7396260107</p>
+              <p style="font-family: 'Poppins', sans-serif;">+ 91 6300855284</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="shop.html">ElectronicsHub.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- swiper script link -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".review-slider", {
+      loop: true,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1020: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+
+
+</body>
+
+</html>
