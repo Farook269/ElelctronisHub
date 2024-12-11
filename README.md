@@ -190,3 +190,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Happy Shopping with ElectronicsHub!**
+
+For any inquiries or assistance, please feel free to reach out to us at (mailto:farookbashamulla269@gmail.com).
